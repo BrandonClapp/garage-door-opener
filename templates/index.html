@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Garage Door</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="/scripts/jquery-3.1.1.min.js"></script>
   </head>
   <body>
     <style>
@@ -21,7 +22,7 @@
         width: 100%;
       }
 
-      .trigger {
+      #trigger {
         width: 100%;
         padding: 20px;
         border-radius: 0;
@@ -39,7 +40,22 @@
     </script>
     <h1>Garage Door</h1>
     <div class="container">
-      <button class="trigger">Open/Close</button>
+      <button id="trigger">Open/Close</button>
     </div>
+
+    <script>
+      $(document).ready(function() {
+        $('#trigger').click(function() {
+          $.post('/trigger/', function() {
+            console.log('triggered.');
+            // show success message for 3-5 seconds.
+          })
+          .fail(function() {
+            console.log('failed.');
+            // show fail message for 3-5 seconds.
+          });
+        });
+      });
+    </script>
   </body>
 </html>
