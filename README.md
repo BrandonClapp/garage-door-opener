@@ -3,12 +3,13 @@ Raspberry pi project for opening garage door.
 
 Provisioning raspbian image:
 
-## update all packages & install python-pip
+## update all packages & install tools
 
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install pip
+sudo apt-get install python-pip
+sudo apt-get install git
 ```
 
 ### web server
