@@ -61,4 +61,4 @@ autorestart = true
 - Cable (20 guage or similar)
 - [Relay](https://www.amazon.com/Tolako-Arduino-Indicator-Channel-Official/dp/B00VRUAHLE/ref=sr_1_4?ie=UTF8&qid=1488514227&sr=8-4&keywords=relay)
   - This project only uses a 1 channel relay for a single garage door, but could easily be modified to use multiple channels for multiple doors.
-  - Resistor
+- Resistor
