@@ -21,7 +21,7 @@ sudo pip install flask
 ### web application
 
 ```bash
-cd ~/application/hosting/path # wherever we want to host the web app.
+cd /home/pi  # or wherever you want to host the web app.
 git clone https://github.com/BrandonClapp/garage-door-opener
 cd garage-door-opener
 sudo python server.py # just to ensure that the server starts
@@ -38,8 +38,19 @@ sudo apt-get install supervisor
 cd /etc/supervisord/
 sudo nano supervisord.conf
 
-# add the section for your application. i.e. http://stackoverflow.com/a/33591664/1730061
+# At the bottom of the file, add the section for your application.
+# i.e. http://stackoverflow.com/a/33591664/1730061
 
 sudo supervisorctl update
 sudo supervisorctl status
+```
+
+**Example supervisord.conf section**
+
+```
+[program:garage-door-opener]                                                                  
+command = python server.py                                      
+directory = /home/pi/garage-door-opener                            
+autostart = true                                                                
+autorestart = true
 ```
