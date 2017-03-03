@@ -34,7 +34,7 @@ sudo python server.py # just to ensure that the server starts
 Supervisord will ensure that our web server restarts on boot or server crash.
 
 ```bash
-sudo apt-get install supervisord
+sudo apt-get install supervisor
 cd /etc/supervisord/
 sudo nano supervisord.conf
 
