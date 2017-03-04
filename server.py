@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, send_from_directory
 import time
 import RPi.GPIO as GPIO
@@ -23,6 +24,10 @@ def trigger():
     time.sleep(0.5)
     GPIO.output(pin, False)
     return ('', 204)
+
+@app.route('/apple-touch-icon.png')
+def touchicon():
+    return send_from_directory( os.path.join(app.root_path , 'static' ) , 'apple-touch-icon.png' )
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=False)
