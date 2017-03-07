@@ -2,7 +2,7 @@
 
 Raspberry pi project for opening garage door.
 
-[![Demo](https://img.youtube.com/vi/m5UOdb8SFQg/0.jpg)](https://www.youtube.com/watch?v=m5UOdb8SFQg)
+[![Demo](https://i.ytimg.com/vi/m5UOdb8SFQg/0.jpg)](https://www.youtube.com/watch?v=m5UOdb8SFQg)
 
 Provisioning raspbian image:
 
